@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XWare Status & Updates</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(120deg, #141414, #282828);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: #1f1f1f;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            color: #ee68f8;
+            margin: 0;
+            text-shadow: 0 0 10px #ee68f8;
+        }
+
+        .status-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .status-indicator {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: #00ff88;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #00ff88;
+        }
+
+        .status-text {
+            display: inline-block;
+            margin-left: 10px;
+            font-size: 18px;
+            color: #ee68f8;
+            text-shadow: 0 0 8px #ee68f8;
+        }
+
+        .updates-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #1f1f1f;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .update-item {
+            margin-bottom: 20px;
+        }
+
+        .update-title {
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+            color: #ee68f8;
+            text-shadow: 0 0 8px #ee68f8;
+        }
+
+        .update-title:hover {
+            color: #00ff88;
+        }
+
+        .update-content {
+            display: none;
+            margin-top: 10px;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #ee68f8;
+            text-shadow: 0 0 6px #ee68f8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #141414;
+            border-top: 1px solid #282828;
+            font-size: 14px;
+            margin-top: auto;
+            position: relative;
+        }
+
+        footer .links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 10px;
+        }
+
+        footer .links a {
+            color: #ee68f8;
+            text-shadow: 0 0 8px #ee68f8;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        footer .links a:hover {
+            text-decoration: underline;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer p a {
+            color: #4682b4;
+            text-shadow: 0 0 8px #4682b4;
+            text-decoration: none;
+        }
+
+        footer p a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>XWare Status & Updates</h1>
+    </header>
+
+    <div class="status-container">
+        <div class="status-indicator"></div>
+        <span class="status-text">Fortnite public undetected</span>
+        
+    </div>
+    <div class="status-container">
+        <div class="status-indicator"></div>
+        <span class="status-text">Xware woofer undetected</span>
+
+    </div>
+
+    <div class="updates-container">
+        <div class="update-item">
+            <div class="update-title">bug fix: Performance Improvements</div>
+            <div class="update-content">No more laggy ESP + tracker </div>
+        </div>
+
+        <div class="update-item">
+            <div class="update-title">update v2.001: New Feature Release</div>
+            <div class="update-content">New clean ui with dark colors for best looking ui on fortnite public</div>
+        </div>
+
+        <div class="update-item">
+            <div class="update-title">update v2.001: New Feature Release</div>
+            <div class="update-content">New clean ui with dark colors for best looking ui on xware woofer</div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="links">
+            <a href="https://t.me/groupshinyx" target="_blank">Telegram</a>
+            <a href="https://discord.gg/2vs8SKTBUg" target="_blank">Discord</a>
+            <a href="https://xwarev3.sellsn.io/" target="_blank">Main Website</a>
+        </div>
+        <p>&copy; 2025 XWare. <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+    <script>
+        const updateTitles = document.querySelectorAll('.update-title');
+        updateTitles.forEach(title => {
+            title.addEventListener('click', () => {
+                const content = title.nextElementSibling;
+                const isOpen = content.style.display === 'block';
+                content.style.display = isOpen ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+</html>
